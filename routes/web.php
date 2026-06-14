@@ -24,3 +24,11 @@ Route::get('/cursos/listagem', [CursoController::class, 'listagem']);
 // Parte 3 — Parâmetros
 Route::get('/usuario/{nome}', function ($nome) { return 'Usuário: ' . $nome; });
 Route::get('/curso/{id}', [CursoController::class, 'show']);
+
+// Parte 4 — Formulários
+Route::get('/produtos/create', [App\Http\Controllers\ProdutoController::class, 'create']);
+Route::post('/produtos', [App\Http\Controllers\ProdutoController::class, 'store']);
+Route::get('/disciplinas', [App\Http\Controllers\DisciplinaController::class, 'index']);
+Route::get('/disciplinas/novo', [App\Http\Controllers\DisciplinaController::class, 'create']);
+Route::post('/disciplinas', [App\Http\Controllers\DisciplinaController::class, 'store']);
+Route::get('/disciplinas/{id}', [App\Http\Controllers\DisciplinaController::class, 'show']);
