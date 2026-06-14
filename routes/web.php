@@ -32,3 +32,6 @@ Route::get('/disciplinas', [App\Http\Controllers\DisciplinaController::class, 'i
 Route::get('/disciplinas/novo', [App\Http\Controllers\DisciplinaController::class, 'create']);
 Route::post('/disciplinas', [App\Http\Controllers\DisciplinaController::class, 'store']);
 Route::get('/disciplinas/{id}', [App\Http\Controllers\DisciplinaController::class, 'show']);
+
+// Parte 5 — Resource Controller
+Route::resource('alunos', App\Http\Controllers\AlunoController::class);
