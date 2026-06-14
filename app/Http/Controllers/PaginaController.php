@@ -30,3 +30,6 @@ class PaginaController extends Controller
         return view('equipe');
     }
 }
+// fix: método equipe foi adicionado após identificar o erro
+// "Call to undefined method App\Http\Controllers\PaginaController::equipe()"
+// O Laravel lança esse erro quando a rota aponta para um método inexistente no controller
